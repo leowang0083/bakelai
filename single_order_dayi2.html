@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>下单需求-女上衣</title>
+    
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+
+    <!-- Morris -->
+    <link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+	<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min.css?v=4.0.0" rel="stylesheet">
+	<link href="css/singorder/iconfont.css" rel="stylesheet">
+	<link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+<form method="get" class="form-horizontal">
+    <div class="wrapper wrapper-content">
+	
+        <div class="row">
+						<!--start这块是在新建订单的时候才会显示-->
+						<div class="form-group">
+							<div class="col-sm-4">
+								
+								<button class="btn btn-white" onclick="javascript:history.back()" >返回上一页</button>
+							</div>
+						
+						
+						</div>
+						<!--end这块是在新建订单的时候才会显示-->
+						<div class="ibox-title">
+							<h5>客户信息 </h5>
+							
+						</div>
+						<div class="ibox-content">
+							<div class="col-sm-3">
+								<img src="img/profile_small.jpg" width="80%"/>
+								
+							</div>
+							<div class="col-sm-3">
+								<div class="form-group">
+									<label class="col-sm-6 control-label">所属店铺*</label>
+
+									<div class="col-sm-6">
+										<input type="text" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-6 control-label">订单号*</label>
+
+									<div class="col-sm-6">
+										<input type="text" disabled class="form-control">
+									</div>
+								</div>
+								<div class="form-group ">
+									<label class="col-sm-6 control-label">面料号</label>
+
+									<div class="col-sm-6">
+										<div class="input-group">
+											<input type="text" class="form-control" id="test_data">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
+													<span class="caret"></span>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-right" role="menu">
+												</ul>
+											</div>
+											<!-- /btn-group -->
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-6 control-label">手机号*</label>
+
+									<div class="col-sm-6">
+										<input type="text" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-6 control-label">身高</label>
+
+									<div class="col-sm-6">
+										<div class="input-group m-b">
+										<input type="text" class="form-control" name="account" /><span class="input-group-addon">cm</span>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="form-group">
+									<label class="col-sm-6 control-label">顾客姓名*</label>
+
+									<div class="col-sm-6">
+										<input type="text" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-6 control-label">试样情况*</label>
+
+									<div class="col-sm-6">
+										<select class="form-control m-b" name="account">
+											<option>试样</option>
+											<option>不试样</option>
+											
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-6 control-label">穿着场合*</label>
+
+									<div class="col-sm-6">
+										<select class="form-control m-b" name="account">
+											<option>婚庆</option>
+											<option>会议</option>
+											<option>职场</option>
+											<option>商旅</option>
+											<option>日常</option>
+											<option>其它</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-6 control-label">体型</label>
+
+									<div class="col-sm-6">
+										<select class="form-control m-b" name="account">
+											<option>偏瘦</option>
+											<option>标准</option>
+											<option>微胖</option>
+											<option>肥胖</option>
+											<option>健身体</option>
+											
+										</select>
+									</div>
+								</div>
+								
+							</div>
+							<div class="col-sm-3">
+								<div class="form-group" id="data_1">
+									<label class="col-sm-6 control-label">出货期*</label>
+
+									<div class="col-sm-6 input-group date">
+										<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+										<input type="text" class="form-control" value="2014-11-11">
+									</div>
+								</div>
+								<div class="form-group" id="data_1">
+									<label class="col-sm-6 control-label">下单日期*</label>
+
+									<div class="col-sm-6 input-group date">
+										<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+										<input type="text" class="form-control" value="2014-11-11">
+									</div>
+								</div>
+								<div class="form-group" >
+									<label class="col-sm-6 control-label">定制数量*</label>
+
+									<div class="col-sm-6 input-group date">
+										<input type="text" class="form-control">
+									</div>
+								</div>
+								<div class="form-group" >
+									<label class="col-sm-6 control-label">年龄</label>
+
+									
+									<div class="col-sm-6 input-group m-b">
+										<input type="text" class="form-control" name="account" /><span class="input-group-addon">岁</span>
+									
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-6 control-label">体重</label>
+
+									<div class="col-sm-6">
+										<div class="input-group m-b">
+										<input type="text" class="form-control" name="account" /><span class="input-group-addon">kg</span>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							
+							<div class="clearfix"></div>
+						</div>
+					
+					
+				<div class="hr-line-dashed"></div>
+				<div class="ibox float-e-margins">
+						<div class="ibox-title">
+							<h5>款式选择</h5>
+							
+						</div>
+						<div class="ibox-content">
+							<div class="col-sm-4">
+								<div class="form-group">
+									<label class="col-sm-4 control-label">工艺*</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>空白</option>
+											<option>粘合衬</option>
+											<option>半麻衬</option>
+											<option>全麻衬</option>
+											
+										</select>
+
+									</div>
+								</div>	
+								<div class="form-group">
+									<label class="col-sm-4 control-label">门襟*</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>空白</option>
+											<option>单排明门襟</option>
+											<option>双排扣</option>
+											<option>单排暗门襟</option>
+											<option>单排明门对襟</option>
+											<option>单排暗门对襟</option>
+										</select>
+
+									</div>
+								</div>	
+								<div class="form-group">
+									<label class="col-sm-4 control-label">领型*</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>空白</option>
+											<option>平驳领</option>
+											<option>戗驳领</option>
+											<option>直角立领</option>
+											<option>圆角立领</option>
+											<option>青果领</option>
+											<option>中山领</option>
+											
+										</select>
+
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label class="col-sm-4 control-label">驳头宽*</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>空白</option>
+											<option>驳头宽5.5cm</option>
+											<option>驳头宽6cm</option>
+											<option>驳头宽6.5cm</option>
+											<option>驳头宽7cm</option>
+											<option>驳头宽7.5cm</option>
+											<option>驳头宽8cm</option>
+											<option>驳头宽8.5cm</option>
+											<option>驳头宽9cm</option>
+											<option>青果领-窄</option>
+											<option>青果领-宽</option>
+										</select>
+
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-4 control-label">扣位*</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>空白</option>
+											<option>单排1扣</option>
+											<option>单排2扣</option>
+											<option>单排3扣</option>
+											<option>单排4扣</option>
+											<option>单排5扣</option>
+											<option>单排6扣</option>
+											<option>双排2扣1</option>
+											<option>双排4扣2</option>
+											<option>双排6扣4</option>
+										</select>
+
+									</div>
+								</div>	
+								
+								<div class="form-group">
+									<label class="col-sm-4 control-label">叉位*</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>空白</option>
+											<option>不开叉</option>
+											<option>单开叉</option>
+											<option>双开叉</option>
+										
+										</select>
+
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label class="col-sm-4 control-label">外贡针*</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>空白</option>
+											<option>顺色贡针</option>
+											<option>不贡针</option>
+											<option>顺色压明线</option>
+											
+										</select>
+
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-4 control-label">内珠边*</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>空白</option>
+											<option>本色</option>
+											<option>对比色</option>
+											<option>不珠边</option>
+											<option>珠边加异色嵌条</option>
+											<option>不珠边加异色嵌条</option>
+										</select>
+
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-4 control-label">半里/全里*</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>全里</option>
+											<option>半里</option>
+										</select>
+
+									</div>
+								</div>
+						</div>		
+						<div class="col-sm-4">
+								<div class="form-group">
+									<label class="col-sm-4 control-label">上口袋*</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>上直手巾袋</option>
+											<option>上斜手巾袋</option>
+											<option>上弧形手巾袋</option>
+											<option>上明贴袋</option>
+											<option>上无口袋</option>
+											
+										</select>
+
+									</div>
+								</div>	
+								
+								<div class="form-group">
+									<label class="col-sm-4 control-label">下口袋*</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>空白</option>
+											<option>平正装袋有袋盖</option>
+											<option>平双开线袋</option>
+											<option>平一字袋1cm</option>
+											<option>平一字袋1.5cm</option>
+											<option>斜正装袋有袋盖</option>
+											<option>斜双开线袋</option>
+											<option>斜一字袋1cm</option>
+											<option>斜一字袋1.5cm</option>
+											<option>下明贴袋</option>
+											<option>平正装袋</option>
+										</select>
+
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label class="col-sm-4 control-label">右侧卡袋</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>无卡袋</option>
+											<option>平正装卡袋有袋盖</option>
+											<option>双开线卡袋</option>
+											<option>一字卡袋</option>
+											
+										</select>
+
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-4 control-label">袖口</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>直角袖口</option>
+											<option>圆角袖口</option>
+											
+										</select>
+
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-4 control-label">袖口袖衩</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>假眼假衩</option>
+											<option>真眼真衩</option>
+											
+										</select>
+
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-4 control-label">下摆*</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>直角下摆</option>
+											<option>圆角下摆</option>
+											<option>切角下摆</option>
+											
+										</select>
+
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-4 control-label">挂面</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>大挂面</option>
+											<option>直挂面</option>
+										</select>
+
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-4 control-label">里布</label>
+
+									<div class="col-sm-8">
+										<div class="input-group">
+											<input type="text" class="form-control" id="color" value='000000'>
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
+													<span class="caret"></span>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-right" role="menu">
+												</ul>
+											</div>
+											<!-- /btn-group -->
+										</div>
+
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-4 control-label">袖里布</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>袖子同大身</option>
+											<option>袖子异色</option>
+										</select>
+
+									</div>
+								</div>
+								
+							</div>
+							<div class="col-sm-4">
+								<div class="form-group">
+									<label class="col-sm-4 control-label">袖扣*</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>4粒扣</option>
+											<option>3粒扣</option>
+											<option>5粒扣</option>
+										</select>
+
+									</div>
+								</div>	
+								<div class="form-group">
+									<label class="col-sm-4 control-label">纽扣（袖子）*</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>黑色牛角扣</option>
+											<option>棕色牛角扣</option>
+											<option>乳白色贝壳扣</option>
+											<option>树脂扣</option>
+											<option>米兰滴胶扣01</option>
+											<option>米兰滴胶扣02</option>
+											<option>米兰滴胶扣03（100元）</option>
+											<option>米兰滴胶扣04（100元）</option>
+											<option>米兰滴胶扣05（100元）</option>
+											<option>米兰滴胶扣06（100元）</option>
+											<option>米兰滴胶扣07（100元）</option>
+										</select>
+
+									</div>
+								</div>	
+								<div class="form-group">
+									<label class="col-sm-4 control-label">驳头扣眼*</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>机器锁扣眼</option>
+											<option>手工锁扣眼（100元）</option>
+											<option>手工米兰扣（150元）</option>
+											
+										</select>
+
+									</div>
+								</div>	
+								<div class="form-group">
+									<label class="col-sm-4 control-label">门襟袖口扣眼*</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>机器锁扣眼</option>
+											<option>手工锁扣眼（100元）</option>
+											
+										</select>
+
+									</div>
+								</div>	
+								<div class="form-group">
+									<label class="col-sm-4 control-label">袖口第一个扣眼</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>扣眼红色01</option>
+											<option>扣眼金色02</option>
+											<option>扣眼宝蓝色03</option>
+											<option>扣眼白色04</option>
+											<option>扣眼黑色05</option>
+										</select>
+
+									</div>
+								</div>	
+								<div class="form-group">
+									<label class="col-sm-4 control-label">绣字内容</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>不绣字</option>
+											<option>绣字写备注中</option>
+											
+										</select>
+
+									</div>
+								</div>	
+								<div class="form-group">
+									<label class="col-sm-4 control-label">绣字字体</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>华文行楷</option>
+											<option>方正舒体</option>
+											<option>华文新魏</option>
+											<option>KUNSTLERSCRIPT</option>
+											<option>MISTRAL</option>
+											<option>MONOTYPECORSIVA</option>
+										</select>
+
+									</div>
+								</div>	
+								
+								<div class="form-group">
+									<label class="col-sm-4 control-label">绣字位置</label>
+
+									<div class="col-sm-8">
+										<select class="form-control m-b" name="account">
+											<option>主标上</option>
+											<option>挂面上</option>
+											<option>袖口外</option>
+											
+										</select>
+
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label class="col-sm-4 control-label">备注信息</label>
+
+									<div class="col-sm-8">
+										<textarea class="form-control" placeholder="请输入文字"></textarea>
+									</div>
+								</div>
+								
+						</div>	
+								
+						
+						<div class="clearfix"></div>
+						</div>
+					
+					<div class="hr-line-dashed"></div>
+						<div class="ibox-title">
+							<h5>穿着习惯 </h5>
+							
+						</div>
+						<div class="ibox-content">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label class="col-sm-2 control-label">围度习惯</label>
+
+									<div class="col-sm-10">
+										<select class="form-control m-b" name="account">
+											<option>紧身</option>
+											<option>修身</option>
+											<option>合体</option>
+											<option>宽松</option>
+											<option>肥大</option>
+											
+										</select>
+
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label">衣长习惯</label>
+
+									<div class="col-sm-10">
+										<select class="form-control m-b" name="account">
+											<option>正常</option>
+											<option>偏短</option>
+											<option>偏长</option>
+										</select>
+
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label class="col-sm-2 control-label">袖长习惯</label>
+
+									<div class="col-sm-10">
+										<select class="form-control m-b" name="account">
+											<option>正常</option>
+											<option>偏短</option>
+											<option>偏长</option>
+											
+										</select>
+
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label">穿着要求</label>
+
+									<div class="col-sm-10">
+										<select class="form-control m-b" name="account">
+											<option>单穿</option>
+											<option>加秋衣</option>
+											<option>加保暖内衣</option>
+											<option>加毛衣</option>
+										</select>
+
+									</div>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+					</div>
+					<div class="hr-line-dashed"></div>
+					
+					
+						<div class="ibox-title">
+							<h5>净身尺寸 </h5>
+							
+						</div>
+						<div class="ibox-content">
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">前衣长*</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account"  disabled /><span class="input-group-addon">cm</span>
+									</div>
+
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">肩宽*</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account"  disabled /><span class="input-group-addon">cm</span>
+									</div>
+
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">袖长*</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account"  disabled /><span class="input-group-addon">cm</span>
+									</div>
+
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">胸围*</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account"  disabled /><span class="input-group-addon">cm</span>
+									</div>
+
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">中腰*</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account"  disabled /><span class="input-group-addon">cm</span>
+									</div>
+
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">肚围</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account"  disabled /><span class="input-group-addon">cm</span>
+									</div>
+
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">下摆*</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account"  disabled /><span class="input-group-addon">cm</span>
+									</div>
+
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">胸高</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account"  disabled /><span class="input-group-addon">cm</span>
+									</div>
+
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">胸距</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account"  disabled /><span class="input-group-addon">cm</span>
+									</div>
+
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">前腰节</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account"  disabled /><span class="input-group-addon">cm</span>
+									</div>
+
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">后背长</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account"  disabled /><span class="input-group-addon">cm</span>
+									</div>
+
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">前胸宽</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account"  disabled /><span class="input-group-addon">cm</span>
+									</div>
+
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">后背宽</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account"  disabled /><span class="input-group-addon">cm</span>
+									</div>
+
+								</div>
+							</div>
+							<div class="clearfix"></div>
+					</div>
+					<div class="ibox-title">
+							<h5>成衣尺寸 </h5>
+							
+						</div>
+						<div class="ibox-content">
+							
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">前衣长*</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account" /><span class="input-group-addon">cm</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">肩宽*</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account" /><span class="input-group-addon">cm</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">袖长*</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account" /><span class="input-group-addon">cm</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">胸围*</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account" /><span class="input-group-addon">cm</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">中腰*</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account" /><span class="input-group-addon">cm</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">肚围</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account" /><span class="input-group-addon">cm</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">下摆*</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account" /><span class="input-group-addon">cm</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">胸高</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account"   /><span class="input-group-addon">cm</span>
+									</div>
+
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">胸距</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account"   /><span class="input-group-addon">cm</span>
+									</div>
+
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">前腰节</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account"   /><span class="input-group-addon">cm</span>
+									</div>
+
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">后背长</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account"   /><span class="input-group-addon">cm</span>
+									</div>
+
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">前胸宽</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account"   /><span class="input-group-addon">cm</span>
+									</div>
+
+								</div>
+							</div>
+							<div class="form-group col-sm-3">
+								<label class="col-sm-6 control-label">后背宽</label>
+
+								<div class="col-sm-6">
+									<div class="input-group m-b">
+									<input type="text" class="form-control" name="account"   /><span class="input-group-addon">cm</span>
+									</div>
+
+								</div>
+							</div>
+							<div class="clearfix"></div>
+					</div>
+					<div class="hr-line-dashed"></div>
+						
+						<div class="ibox-title">
+							<h5>体型调整 </h5>
+							
+						</div>
+						<div class="ibox-content">
+							<div class="form-group col-sm-4">
+								<label class="col-sm-6 control-label">围度调整</label>
+
+								<div class="input-group m-b">
+									<select class="form-control" name="account">
+										<option>三围-2</option>
+										<option>三围+2</option>
+										<option>胸围-2</option>
+										<option>胸围+2</option>
+										<option>中腰-2</option>
+										<option>中腰+2</option>
+										<option>下摆-2</option>
+										<option>下摆+2</option>
+										<option>下摆+4</option>
+									</select> <span class="input-group-addon">cm</span>
+								</div>
+							</div>
+							<div class="form-group col-sm-4">
+								<label class="col-sm-6 control-label">左袖长调整</label>
+
+								<div class="input-group m-b">
+									<select class="form-control" name="account">
+										<option>+1</option>
+										<option>+2</option>
+										<option>+3</option>
+										<option>-1</option>
+										<option>-2</option>
+										<option>-3</option>
+									</select> <span class="input-group-addon">cm</span>
+								</div>
+							</div>
+							<div class="form-group col-sm-4">
+								<label class="col-sm-6 control-label">溜肩调整</label>
+
+								<div class="input-group m-b">
+									<select class="form-control" name="account">
+										<option>溜肩-0.5</option>
+										<option>溜肩-1</option>
+										<option>左溜肩-0.5</option>
+										<option>左溜肩-1</option>
+										<option>右溜肩-0.5</option>
+										<option>右溜肩-1</option>
+									</select> <span class="input-group-addon">cm</span>
+								</div>
+							</div>
+							<div class="form-group col-sm-4">
+								<label class="col-sm-6 control-label">平肩调整</label>
+
+								<div class="input-group m-b">
+									<select class="form-control" name="account">
+										<option>+1</option>
+										<option>+1.5</option>
+										<option>+2</option>
+										<option>+2.5</option>
+										
+									</select> <span class="input-group-addon">cm</span>
+								</div>
+							</div>
+							<div class="form-group col-sm-4">
+								<label class="col-sm-6 control-label">垫肩</label>
+
+								<div class="input-group m-b">
+									<select class="form-control" name="account">
+										<option>垫肩-0.5</option>
+										<option>垫肩-1</option>
+										<option>垫肩+0.5</option>
+										<option>垫肩+1</option>
+										<option>左垫肩-0.5</option>
+										<option>左垫肩-1</option>
+										<option>左垫肩+0.5</option>
+										<option>左垫肩+1</option>
+										<option>右垫肩-0.5</option>
+										<option>右垫肩-1</option>
+										<option>右垫肩+0.5</option>
+										<option>右垫肩+1</option>
+									</select> <span class="input-group-addon">cm</span>
+								</div>
+							</div>
+							<div class="form-group col-sm-4">
+								<label class="col-sm-6 control-label">后背长</label>
+
+								<div class="input-group m-b">
+									<select class="form-control" name="account">
+										<option>+1</option>
+										<option>+1.5</option>
+										<option>+2</option>
+										<option>-1</option>
+										<option>-1.5</option>
+										<option>-2</option>
+									</select> <span class="input-group-addon">cm</span>
+								</div>
+							</div>
+							<div class="form-group col-sm-4">
+								<label class="col-sm-6 control-label">后背宽</label>
+
+								<div class="input-group m-b">
+									<select class="form-control" name="account">
+										<option>两边共-0.6</option>
+										<option>两边共-1</option>
+										<option>两边共+0.6</option>
+										<option>两边共+1</option>
+										<option>中缝-0.6</option>
+										<option>中缝-1</option>
+										<option>中缝+0.6</option>
+										<option>中缝-1</option>
+									</select> <span class="input-group-addon">cm</span>
+								</div>
+							</div>
+							<div class="form-group col-sm-4">
+								<label class="col-sm-6 control-label">前胸宽</label>
+
+								<div class="input-group m-b">
+									<select class="form-control" name="account">
+										<option>两边共-0.6</option>
+										<option>两边共-1</option>
+										<option>两边共+0.6</option>
+										<option>两边共+1</option>
+										<option>中缝-0.6</option>
+										<option>中缝-1</option>
+										<option>中缝+0.6</option>
+										<option>中缝+1</option>
+									</select> <span class="input-group-addon">cm</span>
+								</div>
+							</div>
+							<div class="form-group col-sm-4">
+								<label class="col-sm-6 control-label">横开领</label>
+
+								<div class="input-group m-b">
+									<select class="form-control" name="account">
+										<option>+0.6</option>
+										<option>+1</option>
+										<option>+1.4</option>
+										<option>-0.6</option>
+										<option>-1</option>
+										<option>-1.4</option>
+									</select> <span class="input-group-addon">cm</span>
+								</div>
+							</div>
+							<div class="form-group col-sm-4">
+								<label class="col-sm-6 control-label">袖肥</label>
+
+								<div class="input-group m-b">
+									<select class="form-control" name="account">
+										<option>+1</option>
+										<option>+1.5</option>
+										<option>+2</option>
+										<option>+2.5</option>
+										<option>-1</option>
+										<option>-1.5</option>
+										<option>-2</option>
+										<option>-2.5</option>
+									</select> <span class="input-group-addon">cm</span>
+								</div>
+							</div>
+							<div class="form-group col-sm-4">
+								<label class="col-sm-6 control-label">袖口</label>
+
+								<div class="input-group m-b">
+									<select class="form-control" name="account">
+										<option>+1</option>
+										<option>+1.5</option>
+										<option>+2</option>
+										<option>-1</option>
+										<option>-2</option>
+										<option>-3</option>
+									</select> <span class="input-group-addon">cm</span>
+								</div>
+							</div>
+							<div class="form-group col-sm-4">
+								<label class="col-sm-6 control-label">袖笼</label>
+
+								<div class="input-group m-b">
+									<select class="form-control" name="account">
+										<option>改浅-1</option>
+										<option>改浅-1.5</option>
+										<option>改浅-2</option>
+										<option>改深+1</option>
+										<option>改深+1.5</option>
+										<option>改深+2</option>
+									</select> <span class="input-group-addon">cm</span>
+								</div>
+							</div>
+							<div class="form-group col-sm-4">
+								<label class="col-sm-6 control-label">前衣长</label>
+
+								<div class="input-group m-b">
+									<select class="form-control" name="account">
+										<option>+1</option>
+										<option>+2</option>
+										<option>+3</option>
+										<option>-1</option>
+										<option>-2</option>
+										<option>-3</option>
+									</select> <span class="input-group-addon">cm</span>
+								</div>
+							</div>
+							<div class="form-group col-sm-4">
+								<label class="col-sm-6 control-label">前衣长</label>
+
+								<div class="input-group m-b">
+									<select class="form-control" name="account">
+										<option>+1</option>
+										<option>+2</option>
+										<option>+3</option>
+										<option>-1</option>
+										<option>-2</option>
+										<option>-3</option>
+									</select> <span class="input-group-addon">cm</span>
+								</div>
+							</div>
+							<div class="form-group col-sm-4">
+								<label class="col-sm-6 control-label">后衣长</label>
+
+								<div class="input-group m-b">
+									<select class="form-control" name="account">
+										<option>+1</option>
+										<option>+2</option>
+										<option>+3</option>
+										<option>-1</option>
+										<option>-2</option>
+										<option>-3</option>
+									</select> <span class="input-group-addon">cm</span>
+								</div>
+							</div>
+						<div class="clearfix"></div>
+						</div>
+				<div class="hr-line-dashed"></div>
+						
+						<div class="ibox-title">
+							<h5>附件图片 </h5>
+							
+						</div>
+						<div class="ibox-content">
+						<div class="col-sm-12">
+							<div class="input-group">
+								<div id="file-pretty">
+									<div class="form-group">
+										<label class="font-noraml">图1</label>
+										<input type="file" class="form-control">
+									</div>
+									<div class="form-group">
+										<label class="font-noraml">图2</label>
+										<input type="file" class="form-control">
+									</div>
+									<div class="form-group">
+										<label class="font-noraml">图3</label>
+										<input type="file" class="form-control">
+									</div>
+									<div class="form-group">
+										<label class="font-noraml">图4</label>
+										<input type="file" class="form-control">
+									</div>
+									<div class="form-group">
+										<label class="font-noraml">图5</label>
+										<input type="file" class="form-control">
+									</div>
+									<div class="form-group">
+										<label class="font-noraml">图6</label>
+										<input type="file" class="form-control">
+									</div>
+								</div>
+							</div>	
+						</div>
+						
+						<div class="clearfix"></div>
+						</div>
+						</div>
+        <div class="row">
+		<div class="form-group">
+			<div class="col-sm-4 col-sm-offset-2">
+				<button class="btn btn-primary closebtn" type="submit">保存内容</button>
+				<!--start这块是在新建订单的时候才会显示-->
+				<button class="btn btn-white" onclick="javascript:history.back()" >返回上一页</button>
+				<!--end这块是在新建订单的时候才会显示-->
+			</div>
+		</div>
+		
+		</div>
+		</form>
+    </div>
+
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.5"></script>
+	<script src="js/plugins/iCheck/icheck.min.js"></script>
+	<script src="js/plugins/suggest/bootstrap-suggest.min.js"></script>
+	<script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+	<script src="js/plugins/prettyfile/bootstrap-prettyfile.js"></script>
+    <script>
+		var index = parent.layer.getFrameIndex(window.name);
+        $(document).ready(function(){
+		$("#data_1 .input-group.date").datepicker({
+			todayBtn: "linked",
+			keyboardNavigation: !1,
+			forceParse: !1,
+			calendarWeeks: !0,
+			autoclose: !0
+		})
+		$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})
+		 
+		 var testdataBsSuggest = $("#test_data").bsSuggest({
+			
+			data: {
+				"value": [{
+					
+					"word": "LTC 23146-700",
+					
+				}, {
+					
+					"word": "LTC 23141-700",
+					
+				}, {
+					
+					"word": "LTC 23367-700",
+					
+				}, {
+					
+					"word": "LTC 23370-400",
+					
+				}],
+				"defaults": ""
+			}
+		 });
+		
+		 var color = $("#color").bsSuggest({
+				url: "color.json",
+				processData:function(json){ 
+					
+					var i, len, data = {value: []};  
+  
+					if(!json || json.length == 0) {  
+						return false;  
+					}  
+		    
+					len = json.length;  
+					data.value.push({"Keyword": '000000'});
+					data.value.push({"Keyword": '顺色里布'});
+					for (i = 0; i < len; i++) {  
+						data.value.push({  
+							 
+							"Keyword": json[i].word,  
+							
+						});  
+					} 
+					return data;
+				}
+			 });
+		 
+		 $('#file-pretty input[type="file"]').prettyFile()
+		});
+		$('.closebtn').click(function(){
+			//console.log(parent.frames['layui-layer-iframe'+index].);
+			parent.location.reload();
+			parent.layer.close(index);
+			
+		})
+		
+    </script>
+   
+</body>
+
+</html>
